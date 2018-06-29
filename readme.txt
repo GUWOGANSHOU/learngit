@@ -1,1 +1,4 @@
-不小心关闭了只能重新做一次我也很绝望
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
+Git has a mutable index called stage.
+Git tracks changes.11
