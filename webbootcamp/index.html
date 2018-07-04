@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VR创客教室</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/reset.css">
+</head>
+<body>
+    <div class="l-sidebar">
+        <div class="vr-logo-box">
+        <a href="###" title="101 VR创客教室" class="vr-logo"></a>
+        </div>
+        <div class="vr-courses">
+            <div class="vr-courses-title">课程列表</div>
+            <ul class="vr-courses-list">
+                <li> 
+                    <a href="###" class="vr-courses__item">全部课程</a>
+                </li>
+                <li class="ui-on"> 
+                    <a href="###" class="vr-courses__item">课程一：静夜思</a>
+                </li>
+                <li> 
+                    <a href="###" class="vr-courses__item">课程二：红军长征</a>
+                </li>
+                <li> 
+                    <a href="###" class="vr-courses__item">课程三：活字印刷术</a>
+                </li>
+                <li> 
+                    <a href="###" class="vr-courses__item">课程四：郑和下西洋</a>
+                </li>
+                <li> 
+                    <a href="###" class="vr-courses__item">课程五：梦想之家</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="l-content">
+    <div class="l-top">
+        <div class="user-info">
+            <div class="user-info-item">
+                <span class="vr-icon vr-icon--user"></span>
+                <span class="user-info__txt">用户：王小明</span>
+            </div>
+            <div class="user-info-item">
+                    <span class="vr-icon vr-icon--id"></span>
+                    <span class="user-info__txt">身份：学生</span>
+            </div>
+        </div>
+        <div class="vr-extend">
+            <div class="vr-extend__select">
+                <select>
+                    <option>设备选择</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="l-main">
+        <div class="l-main__hd">
+            <ul class="vr-tab">
+                <li class="vr-tab__item on">
+                    <a href="###">我的作品</a>
+                </li>
+                <li class="vr-tab__item">
+                    <a href="###">班级作品</a>
+                </li>
+            </ul>
+            <div class="vr-btns-group">
+                <button class="vr-btn vr-hd-btn">
+                    <i class="vr-icon vr-icon--upload"></i>
+                    <span class="vr-hd-btn__txt">提交作品</span>
+                </button>
+                <button class="vr-btn vr-hd-btn" onclick="showDiv()">
+                    <i class="vr-icon vr-icon--create"></i>
+                    <span class="vr-hd-btn__txt">新建作品</span>
+                </button>
+            </div>
+        </div>
+        <div class="l-main__bd">
+            <div id="popDiv">
+                <div class="popDiv__hd">
+                <span>新建作品</span>
+                <a onclick="closeDiv()"><i class="vr-icon vr-icon--close"></i></a>
+                </div>
+                <div class="popDiv__bd">
+                    <div class="bd-item">
+                        <span class="bd-txt bd-txt-control">资源名称</span>
+                        <input type="text" class="input1" value="真实世界-泰会玩">
+                    </div>
+                    <div class="bd-item">
+                        <span class="bd-txt bd-txt-pos">作者</span>
+                        <input type="text" class="input2" value="">
+                        <button class="vr-hd-btn vr-add-btn" onclick="showDiv2()">
+                            <i class="vr-icon vr-icon--author"></i>
+                        </button>
+                    </div>
+                    <div class="bd-item">
+                        <span class="bd-txt">配图</span>
+                        <input type="text" class="input3" value="点击上传图片">
+                    </div>
+                    <div class="bd-item">
+                        <span class="bd-txt bd-txt-pos">简介</span>
+                        <textarea wrap="physical" class="input4">《真实世界-泰会玩》第三站，我们来到清迈，清迈素有“泰北玫瑰”之称。二因他农山则是这座小城一道亮丽的风景线。这一站我们来探秘因他农，因为这里不但藏着皇室的秘密花园，还有夏日炎炎中的几十度的温差，700年前的兰纳泰王朝的遗迹，而且这里还居住着神秘的“克伦族”人。</textarea>
+                    </div>
+                </div>
+                <div class="popDiv__ft">
+                   <div class="ft-btn">
+                       <button class="vr-hd-btn">确定提交</button>
+                    </div>
+                    <p>提交后显示在班级作品区</p> 
+                </div>
+            </div>
+            <div class="vr-search">
+                <div class="vr-search__main">
+                    <input type="text" placeholder="搜索资源..." class="input-change">
+                </div>
+                <button class="vr-search__btn vr-hd-btn">搜索</button>
+            </div>
+            <div class="vr-card-main">
+                <ul class="vr-card-list">
+                    <li>
+                        <div class="vr-card-item">
+                            <div class="vr-card-box">
+                                <div class="vr-card-item__bd">
+                                    <img src="images/u=3827902191,936378654&fm=206&gp=0.png" alt="" class="vr-card-item__pic">
+                                    <div class="vr-card-item__info">
+                                        <div class="vr-card-info__control">
+                                        <i class="vr-icon vr-icon--friends"></i>
+                                        <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                        <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vr-card-item__btns">
+                                    <button class="vr-btn vr-card-btn">
+                                        <i class="vr-icon vr-icon--edit"></i>
+                                        <p class="vr-btn__txt">编辑</p>
+                                    </button>
+                                    <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--play"></i>
+                                            <p class="vr-btn__txt">播放</p>
+                                    </button>
+                                    <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--delete"></i>
+                                            <p class="vr-btn__txt">删除</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="vr-card-item__ft">郑和下西洋</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="vr-card-list">
+                        <li>
+                            <div class="vr-card-item">
+                                <div class="vr-card-box">
+                                    <div class="vr-card-item__bd">
+                                        <img src="images/242253169059.png" alt="" class="vr-card-item__pic">
+                                        <div class="vr-card-item__info">
+                                            <div class="vr-card-info__control">
+                                            <i class="vr-icon vr-icon--friends"></i>
+                                            <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                            <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-card-item__btns">
+                                        <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--edit"></i>
+                                            <p class="vr-btn__txt">编辑</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--play"></i>
+                                                <p class="vr-btn__txt">播放</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--delete"></i>
+                                                <p class="vr-btn__txt">删除</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="vr-card-item__ft">静夜思</p>
+                            </div>
+                        </li>
+                </ul>
+                <ul class="vr-card-list">
+                        <li>
+                            <div class="vr-card-item">
+                                <div class="vr-card-box">
+                                    <div class="vr-card-item__bd">
+                                        <img src="images/u=3827902191,936378654&fm=206&gp=0.png" alt="" class="vr-card-item__pic">
+                                        <div class="vr-card-item__info">
+                                            <div class="vr-card-info__control">
+                                            <i class="vr-icon vr-icon--friends"></i>
+                                            <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                            <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-card-item__btns">
+                                        <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--edit"></i>
+                                            <p class="vr-btn__txt">编辑</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--play"></i>
+                                                <p class="vr-btn__txt">播放</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--delete"></i>
+                                                <p class="vr-btn__txt">删除</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="vr-card-item__ft">郑和下西洋</p>
+                            </div>
+                        </li>
+                </ul>
+                <ul class="vr-card-list">
+                    <li>
+                        <div class="vr-card-item">
+                            <div class="vr-card-box">
+                                <div class="vr-card-item__bd">
+                                    <img src="images/242253169059.png" alt="" class="vr-card-item__pic">
+                                    <div class="vr-card-item__info">
+                                        <div class="vr-card-info__control">
+                                        <i class="vr-icon vr-icon--friends"></i>
+                                        <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                        <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vr-card-item__btns">
+                                    <button class="vr-btn vr-card-btn">
+                                        <i class="vr-icon vr-icon--edit"></i>
+                                        <p class="vr-btn__txt">编辑</p>
+                                    </button>
+                                    <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--play"></i>
+                                            <p class="vr-btn__txt">播放</p>
+                                    </button>
+                                    <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--delete"></i>
+                                            <p class="vr-btn__txt">删除</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="vr-card-item__ft">静夜思</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="vr-card-list">
+                        <li>
+                            <div class="vr-card-item">
+                                <div class="vr-card-box">
+                                    <div class="vr-card-item__bd">
+                                        <img src="images/u=3827902191,936378654&fm=206&gp=0.png" alt="" class="vr-card-item__pic">
+                                        <div class="vr-card-item__info">
+                                            <div class="vr-card-info__control">
+                                            <i class="vr-icon vr-icon--friends"></i>
+                                            <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                            <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-card-item__btns">
+                                        <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--edit"></i>
+                                            <p class="vr-btn__txt">编辑</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--play"></i>
+                                                <p class="vr-btn__txt">播放</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--delete"></i>
+                                                <p class="vr-btn__txt">删除</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="vr-card-item__ft">郑和下西洋</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="vr-card-list">
+                            <li>
+                                <div class="vr-card-item">
+                                    <div class="vr-card-box">
+                                        <div class="vr-card-item__bd">
+                                            <img src="images/242253169059.png" alt="" class="vr-card-item__pic">
+                                            <div class="vr-card-item__info">
+                                                <div class="vr-card-info__control">
+                                                <i class="vr-icon vr-icon--friends"></i>
+                                                <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                                <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="vr-card-item__btns">
+                                            <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--edit"></i>
+                                                <p class="vr-btn__txt">编辑</p>
+                                            </button>
+                                            <button class="vr-btn vr-card-btn">
+                                                    <i class="vr-icon vr-icon--play"></i>
+                                                    <p class="vr-btn__txt">播放</p>
+                                            </button>
+                                            <button class="vr-btn vr-card-btn">
+                                                    <i class="vr-icon vr-icon--delete"></i>
+                                                    <p class="vr-btn__txt">删除</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="vr-card-item__ft">静夜思</p>
+                                </div>
+                            </li>
+                    </ul>
+                    <ul class="vr-card-list">
+                            <li>
+                                <div class="vr-card-item">
+                                    <div class="vr-card-box">
+                                        <div class="vr-card-item__bd">
+                                            <img src="images/u=3827902191,936378654&fm=206&gp=0.png" alt="" class="vr-card-item__pic">
+                                            <div class="vr-card-item__info">
+                                                <div class="vr-card-info__control">
+                                                <i class="vr-icon vr-icon--friends"></i>
+                                                <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                                <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="vr-card-item__btns">
+                                            <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--edit"></i>
+                                                <p class="vr-btn__txt">编辑</p>
+                                            </button>
+                                            <button class="vr-btn vr-card-btn">
+                                                    <i class="vr-icon vr-icon--play"></i>
+                                                    <p class="vr-btn__txt">播放</p>
+                                            </button>
+                                            <button class="vr-btn vr-card-btn">
+                                                    <i class="vr-icon vr-icon--delete"></i>
+                                                    <p class="vr-btn__txt">删除</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="vr-card-item__ft">郑和下西洋</p>
+                                </div>
+                            </li>
+                    </ul>
+                    <ul class="vr-card-list">
+                        <li>
+                            <div class="vr-card-item">
+                                <div class="vr-card-box">
+                                    <div class="vr-card-item__bd">
+                                        <img src="images/242253169059.png" alt="" class="vr-card-item__pic">
+                                        <div class="vr-card-item__info">
+                                            <div class="vr-card-info__control">
+                                            <i class="vr-icon vr-icon--friends"></i>
+                                            <span class="vr-card-item__name" title="李冉、涂佳佳、李婷婷、张婷、张三、李四、王小明、张三丰、黎明">李冉、涂佳佳、李婷婷、张婷</span>
+                                            <span class="vr-card-item_date">2018/07/01 22:12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-card-item__btns">
+                                        <button class="vr-btn vr-card-btn">
+                                            <i class="vr-icon vr-icon--edit"></i>
+                                            <p class="vr-btn__txt">编辑</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--play"></i>
+                                                <p class="vr-btn__txt">播放</p>
+                                        </button>
+                                        <button class="vr-btn vr-card-btn">
+                                                <i class="vr-icon vr-icon--delete"></i>
+                                                <p class="vr-btn__txt">删除</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="vr-card-item__ft">静夜思</p>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="l-main__ft">
+            <div class="vr-page">
+                <a href="###" class="vr-page__item">
+                    <i class="vr-icon vr-icon--pre"></i>
+                </a>
+                <a href="###" class="vr-page__item">1</a>
+                <a href="###" class="vr-page__item">2</a>
+                <a href="###" class="vr-page__item">3</a>
+                <a href="###" class="vr-page__item">4</a>
+                <a href="###" class="vr-page__item">5</a>
+                <a href="###" >...</a>
+                <a href="###" class="vr-page__item">100</a>
+                <a href="###" class="vr-page__item">
+                    <i class="vr-icon vr-icon--next"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="bg"></div>
+    <div id="bg2"></div>
+    <div id="popDiv2">
+        <div class="popDiv__hd">
+            <span>班级成员</span>
+            <a onclick="closeDiv2()"><i class="vr-icon vr-icon--close"></i></a>
+        </div>
+        <div class="popDiv__bd">
+            <div class="left">
+                <input placeholder="搜索人名" class="select-change select-input">
+                <select  id="" class="input-change select-change">
+                    <option>李明</option>
+                    <option>张三丰</option>
+                    <option>吴老二</option>
+                    <option>斯琴高娃</option>
+                    <option>周杰伦</option>
+                    <option>白宇</option>
+                    <option>张艺兴</option>
+                </select>
+            </div>
+            <div class="middle">
+                <button class="popDiv-btn vr-hd-btn">添加</button>
+                <button class="popDiv-btn vr-hd-btn">删除</button>
+            </div>
+            <div class="right">
+                <textarea class="textarea-change"></textarea>
+            </div>
+        </div>
+        <div class="popDiv__ft">
+            <div class="btn-pos"> 
+                <button class="vr-hd-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+function showDiv(){
+    document.getElementById('popDiv').style.display='block';
+    document.getElementById('bg').style.display='block';
+}
+function showDiv2(){
+    document.getElementById('popDiv2').style.display='block';
+    document.getElementById('bg2').style.display='block';
+}
+function closeDiv(){
+    document.getElementById('popDiv').style.display='none';
+    document.getElementById('bg').style.display='none';
+}
+function closeDiv2(){
+    document.getElementById('popDiv2').style.display='none';
+    document.getElementById('bg2').style.display='none';
+}
+</script>
