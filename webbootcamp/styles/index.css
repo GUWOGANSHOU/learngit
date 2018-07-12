@@ -1,55 +1,67 @@
 @charset "UTF-8";
-body{
+body {
     font-family: 微软雅黑!important;
+    font:normal 100%;
 }
-a{
+a {
     text-decoration: none;
+}
+select,
+.vr-hd-btn,
+.vr-card-btn,
+.vr-courses-list li {
     cursor: pointer;
 }
+input,
+textarea,
+.user-info__txt,
+.vr-card-item__info,
+.vr-btn__txt,
+.popDiv__ft p {
+    font-size: .875em;
+}
 /* 布局组件 */
-.l-sidebar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 265px;
-    height: 1080px;
+.wrapper {
+    overflow: hidden;
+}
+.l-sidebar {
+    float: left;
+    width: 16.5em;
     background-color: #3d485d;
+    padding-bottom: 300em;
+    margin-bottom: -300em;
 }
 /* logo */
-.vr-logo-box{
-    height: 64px;
+.vr-logo-box {
+    height: 4em;
     background-image: url(../images/bg_hov.png);
     background-repeat: repeat-y;
 }
-.vr-logo{
+.vr-logo {
     display: block;
     height: 100%;
     background: url(../images/101LOGO.png) no-repeat 50% 50%;
 }
 /* 课程列表 */
-.vr-courses-title{
-    height: 50px;
-    line-height: 50px;
+.vr-courses-title {
+    height: 3.125em;
+    line-height: 3.125em;
     background-color: #354052;
-    font-size: 16px;
     color: #f2f2f2;
     text-align: center;
 }
-.vr-courses-list li{
-    height: 58px;
-    cursor: pointer;
+.vr-courses-list li {
+    height: 3.625em;
     position: relative;
 }
-.vr-courses__item{
+.vr-courses__item {
     position: relative;
-    padding-left: 58px;
-    line-height: 58px;
-    background: url(../images/icon_class_nor.png) no-repeat 28px 0;
+    padding-left: 3.625em;
+    line-height: 3.625em;
+    background: url(../images/icon_class_nor.png) no-repeat 1.75em 0;
     color: #7b8599;
-    background-size: contain;
 }
-.vr-courses-list li:hover::before{
+.vr-courses-list li:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -60,306 +72,303 @@ a{
     background-size: 100% 100%;
     transition: width .5s;
 }
-.vr-courses-list li:hover .vr-courses__item{
+.vr-courses-list li:hover .vr-courses__item {
     color: #ffffff;
-    background: url(../images/icon_class_pre.png) no-repeat 28px 0;
-    background-size: contain;
+    background: url(../images/icon_class_pre.png) no-repeat 1.75em 0;
 }
-.vr-courses-list li.ui-on{
+.vr-courses-list li.ui-on {
     background-color: #4f5f79;
 }
-.vr-courses-list li.ui-on .vr-courses__item{
+.vr-courses-list li.ui-on .vr-courses__item {
     color: #eff1f1;
-    background: url(../images/icon_class_pre.png) no-repeat 28px 0;
-    background-size: contain;
+    background: url(../images/icon_class_pre.png) no-repeat 1.75em 0;
 }
-.vr-courses-list li.ui-on::before{
+.vr-courses-list li.ui-on::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
+    width: .25em;
     height: 100%;
     background: url(../images/bg_pre-left.png) repeat-x 0 0;
     background-size: 100% 100%;
     transition: width .5s;
 }
 /* 内容区 */
-.l-content{
+.l-content {
     background-color: #edf2f6;
-    margin-left: 265px;
-    width: 1655px;
-    height: 1080px;
+    margin-left: 16.5em;
 }
 /* 用户信息区 */
-.l-top{
-    height: 64px;
+.l-top {
+    height: 4em;
     background-color: #ffffff;
     border-bottom: #e2e2e2 1px solid;
     position: relative;
-    padding-top: 20px;
+    padding-top: 1.25em;
 }
-.user-info-item{
+.user-info-item {
     position: relative;
     display: inline-block;
-    padding: 0 16px;
+    padding: 0 1em;
 }
-.user-info__txt{
-    font-size: 14px;
+.user-info__txt {
     color: #a0a0a0;
 }
-.l-main__hd{
-    height: 50px;
+.l-main__hd {
+    height: 3.125em;
     background-color: #fafbfd;
     border-bottom: #e2e2e2 1px solid;
 }
 /* icon组件*/
-.vr-icon{
+.vr-icon {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    width: 1.75em;
+    height: 1.75em;
     vertical-align: middle;
 }
-.vr-icon--user{
+.vr-icon--user {
     background-image: url(../images/icon_user.png);
 }
-.vr-icon--id{
+.vr-icon--id {
     background-image: url(../images/icon_id.png);
 }
-.vr-icon--upload{
+.vr-icon--upload {
     background-image: url(../images/uplode.png);
 }
-.vr-icon--create{
+.vr-icon--create {
     background-image: url(../images/create.png);
 }
-.vr-icon--search{
+.vr-icon--search {
     background-image: url(../images/icon_search.png);
 }
-.vr-icon--friends{
+.vr-icon--friends {
     background-image: url(../images/Friends.png);
-    margin-left: 18px;
+    margin-left: 1.125em;
 }
-.vr-icon--edit{
+.vr-icon--edit {
     background-image: url(../images/编辑.png);
 }
-.vr-icon--play{
+.vr-icon--play {
     background-image: url(../images/播放.png);
 }
-.vr-icon--delete{
+.vr-icon--delete {
     background-image: url(../images/删除.png);
 }
-.vr-icon--pre{
+.vr-icon--pre {
     background-image: url(../images/icon_pre.png)
 }
-.vr-icon--next{
+.vr-icon--next {
     background-image: url(../images/icon_next.png)
 }
-.vr-icon--close{
+.vr-icon--close {
     background-image: url(../images/btn_close_nor.png);
-    margin-left: 20px;
+    margin-left: 1.25em;
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: .5em;
+    top: .5em;
 }
-.vr-icon--author{
+.vr-icon--author {
     background-image: url(../images/用户添加.png);
-    margin-left: -3px;
+    margin-left: -.1875em;
 }
 /* 头部拓展区*/
-.vr-extend{
+.vr-extend {
     position: absolute;
-    top:16px;
-    right: 54px;
+    top:1em;
+    right: 3.375em;
 }
-.vr-extend__select{
+.vr-extend__select {
     position: relative;
-    width: 102px;
-    height: 34px;
+    width: 6.375em;
+    height: 2.125em;
 }
-select{
+select {
     border: #16a4fa 1px solid;
     outline: none;
     width: 100%;
-    height: 34px;
-    line-height: 34px;
+    height: 2.125em;
+    line-height: 2.125em;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding-left: 13px;
+    padding-left: .8125em;
     color: #16a4fa;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 1em;
 }
-.vr-extend__select::after{
+.vr-extend__select::after {
     content: "";
-    width: 10px;
-    height: 7px;
+    width: .625em;
+    height: .4375em;
     background: url(../images/ComboBox.png)no-repeat 50% 50%;
     position: absolute;
-    right: 7px;
-    top: 12px;
+    right: .4375em;
+    top: .75em;
     pointer-events: none;
 }
-select:hover{
+select:hover {
     border: #30b8ff 1px solid;
     color:#30b8ff;
  }
-.vr-extend__select:hover::after{
+.vr-extend__select:hover::after {
     content: "";
-    width: 10px;
-    height: 7px;
+    width: .625em;
+    height: .4375em;
     background: url(../images/ComboBox_hov.png)no-repeat 50% 50%;
     position: absolute;
-    right: 7px;
-    top: 12px;
+    right: .4375em;
+    top: .75em;
     pointer-events: none;
 }
 /* ie 隐藏下拉箭头 */
-select::-ms-expand { display: none; }
+select::-ms-expand {
+    display: none; 
+}
 /* Tab标签页 */
-.l-main__hd{
+.l-main__hd {
     position: relative;
 }
-.vr-tab{
-    padding-top: 12px;
+.vr-tab {
+    padding-top: .75em;
 }
-.vr-tab__item{
-    padding: 0 18px;
+.vr-tab__item {
+    padding: 0 1.125em;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.125em;
 }
-li.vr-tab__item a{
+li.vr-tab__item a {
     color: #4d5b67;
 }
-li.on a{
+li.on a {
     color: #3a98d8;
 }
-li.on{
-    padding-bottom: 18px;
-    margin: 0 36px;
+li.on {
+    padding-bottom: 1.125em;
+    margin: 0 2.25em;
     border-bottom: #16a4fa 2px solid;
 }
-.vr-btns-group{
+.vr-btns-group {
     position: absolute;
-    top: 8px;
-    right: 54px;
+    top: .5em;
+    right: 3.375em;
 }
 
 /* 按钮组件 */
-
-.vr-hd-btn{
+.vr-hd-btn,
+.vr-hd-btn:hover,
+.vr-hd-btn:active,
+.vr-logo-box,
+.vr-courses__item,
+.vr-courses-list li:hover, 
+.vr-courses__item,
+.vr-icon--play,
+.vr-courses-list li.ui-on .vr-courses__item {
+    background-size: contain !important;
+    -moz-background-size: contain !important;
+    -webkit-background-size: contain !important;
+}
+.vr-hd-btn {
     background: url(../images/btn_search_nor.png)repeat-x 0 0;
-    width: 120px;
-    height: 33px;
+    width: 7.5em;
+    height: 2.0625em;
     border: #1293f9 1px solid;
-    cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
     color: #edf2f6;
 }
-.vr-hd-btn:hover{
+.vr-hd-btn:hover {
     background: url(../images/btn_search_hov.png)repeat-x 0 0;
 }
-.vr-hd-btn:active{
+.vr-hd-btn:active {
     background: url(../images/btn_search_pre.png)repeat-x 0 0;
 }
 /* 搜索组件 */
-.vr-search{
+.vr-search {
     position: relative;
-    height: 83px;
+    height: 5.1875em;
 }
-.vr-search__main{
+.vr-search__main {
     position: absolute;
-    top: 22px;
-    right: 212px;
+    top: 1.375em;
+    right: 13.25em;
 }
-.vr-search__btn{
-    width: 76px;
+.vr-search__btn {
+    width: 4.75em;
     position: absolute;
-    top: 22px;
-    right: 126px;
+    top: 1.375em;
+    right: 7.875em;
 }
-.input-change{
+.input-change {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     border: #e2e2e2 1px solid;
-    padding: 10px;
-    width: 290px;
-    height: 12px;
+    padding: .625em;
+    width: 18.125em;
+    height: .75em;
     border-radius: 2px;
     background: url(../images/icon_search.png)no-repeat 284px 8px #ffffff;
 }
 /* 作品展示项 */
-.vr-card-main{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 32px 12px 13px;
+.vr-card-main {
+    overflow: hidden;
+    padding: 0 2em .75em .8125em;
 }
-.vr-card-list{
+.vr-card-list {
     display: block;
-    width: 356px;
-    height: 268px;
-    margin: 0px 22px 76px 22px;
+    float: left;
+    margin: 0 1.375em 4.75em 1.375em;
+}
+.vr-card-box {
     border: #dbe0e4 1px solid;
     background-color: #fafbfd;
 }
-img{
-    width: 356px;
-    height: 213px;
+img {
+    max-width: 100%;
 }
-.vr-card-item__bd{
+.vr-card-item__bd {
     position: relative;
-    height: 213px;
+    text-align: center;
 }
-.vr-card-item__info{
+.vr-card-item__info {
     position: absolute;
     background-color: rgba(0,0,0,0.6);
-    width: 356px;
-    height: 34px;
-    bottom:0;
-    display: inline-block;
-    font-size: 14px;
+    width: 100%;
+    height: 2.125em;
+    transform: translateY(-2.2em);
     color: #e7e8e7;
 }
-.vr-card-item__name{
+.vr-card-item__name {
     display: inline-block;
-    width: 150px;
+    width: 9.375em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     vertical-align: middle;
 }
-.vr-card-item_date{
-    display: inline-block;
+.vr-card-item_date {
     vertical-align: middle;
-    margin-left: 21px;
+    margin-left: 1.3125em;
 }
-.vr-card-info__control{
-    margin-top: 6px;
-}
-.vr-card-item__ft{
+.vr-card-item__ft {
     color: #4d5b67;
     text-align: center;
-    padding-top: 15px;
+    padding-top: .9375em;
 }
 /* 选项卡按钮 */
-.vr-card-item__btns{
+.vr-card-item__btns {
     display: flex;    
     justify-content: space-between;
-    padding: 4px 66px;
+    padding: .25em 4.125em;
 }
-.vr-card-btn{
+.vr-card-btn {
     display: block;
-    border:0px;
+    border:0;
     outline: none;
     background-color:transparent;
-    cursor: pointer;
 }
-.vr-btn__txt{
-    font-size: 14px;
+.vr-btn__txt {
     color: #adadad;
 }
 button:hover .vr-btn__txt {
@@ -375,183 +384,180 @@ button:hover .vr-icon--delete {
     background-image: url(../images/删除hov.png);
 }
 /* 分页 */
-.vr-page{
+.l-main__ft {
+    padding-bottom: 20em;
+}
+.vr-page {
     text-align: center;
 }
-.vr-page__item{
+.vr-page__item {
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 0px 8px;
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0 .5em;
     background-color: #e7e7e7;
     color: #6f7a83;
     vertical-align: middle;
-    line-height: 40px;
+    line-height: 2.5em;
 }
-.vr-page__item:hover{
+.vr-page__item:hover {
     background-color: #30b8ff;
     color: #d2efff;
 }
-.vr-page__item:active{
+.vr-page__item:active {
     background-color: #16a4fa;
     color: #c0e6fe;
 }
 /* 弹窗遮罩 新建作品*/
-#bg{
+#bg {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 1080px;
-    width: 1920px;
+    height: 100%;
+    width: 100%;
     z-index: 1;
     background-color: rgba(0,0,0,0.6);
 }
-#popDiv{
+#popDiv, 
+#bg2 {
     display: none;
     position: absolute;
-    z-index: 2;
-    top:228px;
-    left: 640px;
-    width: 754px;
-    height: 579px;
+    left: 50%;
+    top: 20%;
+    width: 47em;
+    height: 36.1875em;
+    margin-left: -23.5em;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: .625em;
+    z-index: 2;
 }
-.popDiv__hd{
-    height: 45px;
+.popDiv__hd {
+    height: 2.8125em;
     background-color: #17a9fa;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: .625em .625em 0 0;
     color: #eff1f1;
     text-align: center;
-    line-height: 45px;
+    line-height: 2.8125em;
 }
-.popDiv__hd i:hover{
+.popDiv__hd i:hover {
     background-image: url(../images/btn_close_hov.png);
 }
-.popDiv__hd i:active{
+.popDiv__hd i:active {
     background-image: url(../images/btn_close_pre.png);
 }
-.popDiv__bd{
-    height: 436px;
+.popDiv__bd {
+    height: 27.25em;
 }
-.popDiv__ft{
-    height: 98px;
+.popDiv__ft {
+    height: 6.125em;
     background-color: #f0f5f9;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 .625em .625em;
     text-align: center;
 }
-.ft-btn{
-    padding: 19px 0px 12px 0px;
+.ft-btn {
+    padding: 1.1875em 0 .75em 0;
 }
-.popDiv__ft p{
-    font-size: 14px;
+.popDiv__ft p {
     color: #b2b2b2;
 }
-.bd-txt{
+.bd-txt {
     color: #4d5b67;
 }
-input{
-    color: #4d5b67;
-    border: #d0d0d0 1px solid;
-    font-size: 14px;
-    padding: 12px;
-    display: inline-block;
-    margin-left: 12px;
-}
-textarea{
+input {
     color: #4d5b67;
     border: #d0d0d0 1px solid;
-    font-size: 14px;
-    padding: 12px;
+    padding: .75em;
     display: inline-block;
-    margin-left: 12px;
+    margin-left: .75em;
 }
-.input1 .input3{
-    width: 300px;
+textarea {
+    color: #4d5b67;
+    border: #d0d0d0 1px solid;
+    padding: .75em;
+    display: inline-block;
+    margin-left: .75em;
 }
-.input2{
-    width: 400px;
-    height: 60px;
+.input1,
+.input3 {
+    width: 18.75em;
 }
-.input4{
-    width: 548px;
-    height: 110px;
+.input2 {
+    width: 25em;
+    height: 3.75em;
+}
+.input4 {
+    width: 34.25em;
+    height: 6.875em;
     overflow: scroll;
     overflow-x:hidden;
 }
-.bd-item{
-    padding:15px 0px 15px 73px;
+.bd-item {
+    padding:0.9375em 0 0.9375em 4.5625em;
 }
-.bd-txt-control{
-    margin-left: -32px;
+.bd-txt-control {
+    margin-left: -2em;
 }
-.bd-txt-pos{
+.bd-txt-pos {
     vertical-align: top;
 }
-.vr-add-btn{
-    width: 33px;
-    height: 33px;
+.vr-add-btn {
+    width: 2.0625em;
+    height: 2.0625em;
     vertical-align: bottom;
-    margin-left: 15px;
+    margin-left: 0.9375em;
 }
 /* 弹窗遮罩 班级成员*/
-#popDiv2{
+#popDiv2 {
     display: none;
     position: absolute;
     z-index: 4;
-    top: 171px;
-    left: 667px;
-    width: 426px;
-    height: 577px;
+    top: 10.6875em;
+    left: 41.6875em;
+    width: 26.625em;
+    height: 36.0625em;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: .625em;
 }
-#bg2{
-    display: none;
-    position: absolute;
+#bg2 {
     z-index: 3;
-    top:228px;
-    left: 640px;
-    width: 754px;
-    height: 579px;
     background-color: rgba(0,0,0,0.6);
 }
-.left{
-    width: 181px;
+.left {
+    width: 11.3125em;
     float: left;
-    margin: 24px 0px 0px 16px;
+    margin: 1.5em 0 0 1em;
 }
-.middle{
+.middle {
     float: left;
 }
-.right{
+.right {
     float: right;
 }
-.select-change{
+.select-change {
     display: block;
-    width: 143px;
-    height: 35px;
-    padding: 0px 8px;
-    font-size: 14px;
+    width: 8.9375em;
+    height: 2.1875em;
+    padding: 0 .5em;
+    font-size: 0.875em;
     color: #4d5b67;
 }
-.select-input{
-    background: url(../images/icon_search.png) no-repeat 119px 8px;
+.select-input {
+    background: url(../images/icon_search.png) no-repeat 7.4375em .5em;
     margin: 0;
-    width: 125px;
+    width: 7.8125em;
 }
-.popDiv-btn{
-    width: 60px;
-    height: 33px;
+.popDiv-btn {
+    width: 3.75em;
+    height: 2.0625em;
     display: block;
-    margin: 19px 0px;
+    margin: 1.1875em 0;
 }
-.textarea-change{
-    margin: 22px 13px;
-    width: 100px;
-    height: 370px;
+.textarea-change {
+    margin: 1.375em .8125em;
+    width: 6.25em;
+    height: 23.125em;
 }
-.btn-pos{
-    padding: 20px 62px;
+.btn-pos {
+    padding: 1.25em 3.875em;
 }

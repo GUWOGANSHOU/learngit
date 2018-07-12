@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/reset.css">
 </head>
 <body>
+    <div class="wrapper">
     <div class="l-sidebar">
         <div class="vr-logo-box">
         <a href="###" title="101 VR创客教室" class="vr-logo"></a>
@@ -79,6 +80,8 @@
             </div>
         </div>
         <div class="l-main__bd">
+            <div id="bg"></div>
+            <div id="bg2"></div>
             <div id="popDiv">
                 <div class="popDiv__hd">
                 <span>新建作品</span>
@@ -110,6 +113,38 @@
                        <button class="vr-hd-btn">确定提交</button>
                     </div>
                     <p>提交后显示在班级作品区</p> 
+                </div>
+            </div>
+            <div id="popDiv2">
+                <div class="popDiv__hd">
+                    <span>班级成员</span>
+                    <a onclick="closeDiv2()"><i class="vr-icon vr-icon--close"></i></a>
+                </div>
+                <div class="popDiv__bd">
+                    <div class="left">
+                        <input placeholder="搜索人名" class="select-change select-input">
+                        <select  id="" class="input-change select-change">
+                            <option>李明</option>
+                            <option>张三丰</option>
+                            <option>吴老二</option>
+                            <option>斯琴高娃</option>
+                            <option>周杰伦</option>
+                            <option>白宇</option>
+                            <option>张艺兴</option>
+                        </select>
+                    </div>
+                    <div class="middle">
+                        <button class="popDiv-btn vr-hd-btn">添加</button>
+                        <button class="popDiv-btn vr-hd-btn">删除</button>
+                    </div>
+                    <div class="right">
+                        <textarea class="textarea-change"></textarea>
+                    </div>
+                </div>
+                <div class="popDiv__ft">
+                    <div class="btn-pos"> 
+                        <button class="vr-hd-btn">确定</button>
+                    </div>
                 </div>
             </div>
             <div class="vr-search">
@@ -404,40 +439,7 @@
         </div>
     </div>
     </div>
-    <div id="bg"></div>
-    <div id="bg2"></div>
-    <div id="popDiv2">
-        <div class="popDiv__hd">
-            <span>班级成员</span>
-            <a onclick="closeDiv2()"><i class="vr-icon vr-icon--close"></i></a>
-        </div>
-        <div class="popDiv__bd">
-            <div class="left">
-                <input placeholder="搜索人名" class="select-change select-input">
-                <select  id="" class="input-change select-change">
-                    <option>李明</option>
-                    <option>张三丰</option>
-                    <option>吴老二</option>
-                    <option>斯琴高娃</option>
-                    <option>周杰伦</option>
-                    <option>白宇</option>
-                    <option>张艺兴</option>
-                </select>
-            </div>
-            <div class="middle">
-                <button class="popDiv-btn vr-hd-btn">添加</button>
-                <button class="popDiv-btn vr-hd-btn">删除</button>
-            </div>
-            <div class="right">
-                <textarea class="textarea-change"></textarea>
-            </div>
-        </div>
-        <div class="popDiv__ft">
-            <div class="btn-pos"> 
-                <button class="vr-hd-btn">确定</button>
-            </div>
-        </div>
-    </div>
+</div>
 </body>
 </html>
 <script>
